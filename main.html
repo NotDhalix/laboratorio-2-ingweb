@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <title>Empleo24</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://kit.fontawesome.com/d4c88f223d.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <h1>Ingrese sus datos para aplicar al empleo.</h1>
+
+<main>
+    <form action="" class="formulario" id="formulario">
+
+        <fieldset class="datospersonales" id="datospersonales">
+            <legend>Datos personales.</legend>
+                <div class="gruponombre" id="gruponombre">
+                        <label for="nombre">Nombre completo</label>
+                        <div class="inputnombre">
+                            <input type="text" name="nombre" id="nombre" class="inputformulario" placeholder="Ej. Luis Hernandez" autofocus="autofocus">
+                            <i class="validar fa-regular fa-circle-xmark"></i>
+                        </div>
+                        <p class="inputerror">El nombre solo puede contener letras.</p>
+                    </div>
+                
+                    <div class="grupofecha" id="grupofecha">
+                        <label for="fechanac">Fecha de nacimiento</label>
+                        <div class="inputfecha">
+                            <input type="date" name="fechanac" id="fechanac" class="inputformulario" min="01-01-1950">
+                            <i class="validar fa-regular fa-circle-xmark"></i>
+                        </div>
+                        <p class="inputerror">Debe tener mínimo 18 años, y máximo 60.</p>
+                    </div>
+
+                    <div class="grupocedula" id="grupocedula">
+                        <label for="cedula">Cedula</label>
+                        <div class="inputcedula">
+                            <input type="text" name="cedula" id="cedula" class="inputformulario" placeholder="8-987-6543">
+                            <i class="validar fa-regular fa-circle-xmark"></i>
+                        </div>
+                        <p class="inputerror">Recuerde utilizar guiones. También Recuerde colocar N para naturalizados y E para extranjeros.</p>
+                    </div>
+
+                    <div class="grupogenero" id="grupogenero">
+                        <label for="genero">Género</label>
+                        <div class="inputgenero">
+                            <input type="text" name="genero" id="genero" class="inputformulario" placeholder="Ej. Masculino">
+                            <i class="validar fa-regular fa-circle-xmark"></i>
+                        </div>
+                        <p class="inputerror">El género sólo puede contener letras.</p>
+                    </div>
+
+                    <div class="gruponacionalidad" id="gruponacionalidad">
+                        <label for="nacionalidad">Nacionalidad</label>
+                        <div class="inputnacionalidad">
+                            <input type="text" name="nacionalidad" id="nacionalidad" class="inputformulario" placeholder="Ej. Panamá">
+                            <i class="validar fa-regular fa-circle-xmark"></i>
+                        </div>
+                        <p class="inputerror">La nacionalidad sólo puede contener letras.</p>
+                    </div>
+
+                    <div class="grupoestadocivil" id="grupoestadocivil">
+                        <label for="estadosciviles">Estado cívil</label>
+                        <div class="listestadocivil">
+                            <select name="estadosciviles" id="estadosciviles">
+                                <option value="soltero">Soltero/a</option>
+                                <option value="concubino">En concubinato</option>
+                                <option value="casado">Casado/a</option>
+                                <option value="viudo">Viudo/a</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grupolicencia" id="grupolicencia">
+                        <label for="licencia">Posee licencia de conducir.</label>
+                        <div class="listalicencia">
+                            <select name="licencia" id="licencia">
+                                <option value="no">No</option>
+                                <option value="si">Si</option>
+                            </select>
+                        </div>
+                    </div>
+
+        </fieldset>
+
+        <fieldset class="salario">
+            <legend>Preferencia salarial.</legend>
+
+            <div class="gruposalario" id="gruposalario">
+                <label for="salario">Salario bruto pretendido.</label>
+                <div class="inputsalario">
+                    <input type="number" name="salario" id="salario" class="inputformulario">
+                    <i class="validar fa-regular fa-circle-xmark"></i>
+                </div>
+                <p class="inputerror">El salario debe ser mayor a 0.</p>
+            </div>
+        
+        </fieldset>
+
+        <fieldset class="datoscontacto">
+            <legend>Datos de contacto.</legend>
+
+            <div class="grupotelefono" id="grupotelefono">
+                <label for="telefono">Teléfono</label>
+                <div class="inputtelefono">
+                    <input type="tel" name="telefono" id="telefono" class="inputformulario" placeholder="Ej. 6666-0000">
+                    <i class="validar fa-regular fa-circle-xmark"></i>
+                </div>
+                <p class="inputerror">Ingrese un número de teléfono válido.</p>
+            </div>
+
+            <div class="grupoemail" id="grupoemail">
+                <label for="email">Correo electrónico</label>
+                <div class="inputemail">
+                    <input type="email" name="email" id="email" class="inputformulario" placeholder="example@enterprise.com">
+                    <i class="validar fa-regular fa-circle-xmark"></i>
+                </div>
+                <p class="inputerror">Ingrese una dirección de correo válida.</p>
+            </div>
+
+            <div class="grupodireccion" id="grupodireccion">
+                <label for="direccion">Dirección</label>
+                <div class="inputdireccion">
+                    <input type="text" name="direccion" id="direccion" class="inputformulario" placeholder="Ej. Ciudad de Panamá, Calidonia, Calle H.">
+                    <i class="validar fa-regular fa-circle-xmark"></i>
+                </div>
+                <p class="inputerror">La dirección no puede quedar vacía.</p>
+            </div>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Experiencias laborales.</legend>
+            <div class="grupoexp" id="grupoexp">
+                <label for="experiencia">Experiencia laboral</label>
+                <div class="inputdireccion">
+                    <textarea rows="10" cols ="180" name="experiencia" id="experiencia" placeholder="Detalle su experiencia laboral aquí."></textarea><br>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="datoseducacion">
+            <legend>Educación.</legend>
+            <div class="educprimaria" id="educprimaria">
+                <label for="primaria">Primaria</label>
+                <div class="inputprimaria">
+                    <textarea rows="4" cols ="180" name="primaria" id="primaria" placeholder="Detalle su educación primaria."></textarea><br>
+                </div>
+            </div>
+            <div class="educsecundaria" id="educsecundaria">
+                <label for="secundaria">Secundaria</label>
+                <div class="inputsecundaria">
+                    <textarea rows="4" cols ="180" name="secundaria" id="secundaria" placeholder="Detalle su educación secundaria."></textarea><br>
+                </div>
+            </div>
+            <div class="educuniversitaria" id="educuniversitaria">
+                <label for="universidad">Universidad</label>
+                <div class="inputuniversidad">
+                    <textarea rows="4" cols ="180" name="universidad" id="universidad" placeholder="Detalle su educación universitaria."></textarea><br>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="idiomas">
+            <legend>Idiomas.</legend>
+            <input type="checkbox" id="espanol" name="espanol" checked />
+            <label for="espanol">Español.</label>
+            <input type="checkbox" id="ingles" name="ingles"/>
+            <label for="ingles">Inglés.</label>
+            <input type="checkbox" id="frances" name="frances"/>
+            <label for="frances">Francés.</label>
+            <input type="checkbox" id="aleman" name="aleman"/>
+            <label for="aleman">Alemán.</label>
+            <input type="checkbox" id="portugues" name="portugues"/>
+            <label for="portugues">Portugués.</label>
+            <input type="checkbox" id="mandarin" name="mandarin"/>
+            <label for="mandarin">Chino Mandarín.</label>
+            <input type="checkbox" id="otro" name="otro"/>
+            <label for="otro">Otro.</label>
+        </fieldset>
+
+        <fieldset class="informatica">
+            <legend>Informática.</legend>
+            <input type="checkbox" id="html" name="html"/>
+            <label for="html">HTML.</label>
+            <input type="checkbox" id="css" name="css"/>
+            <label for="css">CSS.</label>
+            <input type="checkbox" id="javascript" name="javascript"/>
+            <label for="javascript">JavaScript.</label>
+            <input type="checkbox" id="jsp" name="jsp"/>
+            <label for="jsp">JSP.</label>
+            <input type="checkbox" id="otro" name="otro"/>
+            <label for="otro">Otro.</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Referencias.</legend>
+            <div class="gruporefs" id="gruporefs">
+                <label for="referencias">Referencias personales.</label>
+                <div class="referenciastext">
+                    <textarea rows="6" cols ="180" name="referencias" id="referencias" placeholder="Detalle los contactos de referencia"></textarea><br>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="curriculum">
+            <legend>Adjuntar hoja de vida.</legend>
+            <b>Seleccione el documento: </b><input type="file" name="cv">
+        </fieldset>
+        <button type="submit" class="botonenviar">Enviar</button>
+        <div class="error" id="error"> 
+            <p><i class="fa-solid fa-triangle-exclamation"></i><b> Error: Rellene los campos correspondientes con la información correcta.</b></p>
+        </div>
+    </form>
+</main>
+<script src="formulario.js"></script>
+
+<footer>
+
+</footer>
+</body>
+
+</html>
